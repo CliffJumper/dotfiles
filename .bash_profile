@@ -10,12 +10,13 @@ done;
 unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
+# Not sure if needed with ZSH
+#shopt -s nocaseglob;
 
-# Append to the Bash history file, rather than overwriting it
+# BASH ONLY Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
-# Autocorrect typos in path names when using `cd`
+# BASH ONLY Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
 # Enable some Bash 4 features when possible:
