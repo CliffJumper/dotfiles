@@ -1,6 +1,11 @@
-# Mathias’s dotfiles
+# CliffJumper’s dotfiles
 
-![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
+## THIS IS A FORK AND REWORK OF MATHIAS'S DOTFILES [HERE](https://github.com/mathiasbynens/dotfiles)
+
+## EVERYTHING BELOW IS HELD-OVER FROM MATHIAS'S DOTFILES AND IS FOR INFORMATIONAL PURPOSES ONLY
+This is a Work In Progress, so this README will change as I get things working.  Consider this ALPHA for now.
+
+
 
 ## Installation
 
