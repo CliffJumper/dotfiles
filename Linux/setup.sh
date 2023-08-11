@@ -7,6 +7,7 @@ sudo apt install findutils
 sudo apt install mlocate
 sudo apt install bash-completion
 sudo apt install wget
+sudo apt install curl
 sudo apt install gnupg
 sudo apt install tmux
 sudo apt install openssh-client
@@ -27,6 +28,7 @@ sudo apt install rlwrap
 sudo apt install tree
 sudo apt install vbindiff
 sudo apt install zopfli
+sudo apt install fontconfig
 
 ## Setup neovim
 mkdir -p ~/.config/nvim/autoload
