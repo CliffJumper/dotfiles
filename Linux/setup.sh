@@ -3,26 +3,23 @@
 ###############################################################################
 ## What's our Distro?
 ###############################################################################
-if ! type "lsb_release" > /dev/null; then
-    echo "lsb_release not found but required!  Exiting"
-    exit -1
-fi
 DISTRO=$(cat /etc/os-release | grep ^ID= | cut -d "=" -f 2)
+echo $DISTRO
 
 ###############################################################################
 ## Setup Distro
 ###############################################################################
 case $DISTRO in 
     manjaro | arch)
-        siArch/setup.sh
+        DISTRO_DIR="$FULLDIR/Arch"
         ;;
     
     debian)
-        Debian/setup.sh
+        DISTRO_DIR=$FULLDIR/Debian
         ;;
     
     openSuse | sel)
-        Suse/setup.sh
+        DISTRO_DIR=$FULLDIR/Suse
         ;;
     
     *)
@@ -30,19 +27,17 @@ case $DISTRO in
         exit -2
         ;;
 esac
+[ -d "$DISTRO_DIR" ] && . $DISTRO_DIR/setup.sh
 
 ###############################################################################
 ## Setup neovim
 ###############################################################################
-mkdir -p ~/.config/nvim/autoload
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mv Common/init.lua ~/.config/nvim/
-echo "Remember: you might have to run :PlugInstall the first time you launch nvim"
+$FULLDIR/setup_neovim.sh
 
 ###############################################################################
 ## Setup Node/NVM
 ###############################################################################
-./setup_nvm.sh
+# ./setup_nvm.sh
 
 
 

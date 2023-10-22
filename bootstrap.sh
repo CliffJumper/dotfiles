@@ -11,7 +11,7 @@ function doIt() {
 	FULLDIR=$PWD/$SYSTEM
 	echo $FULLDIR
 	
-	[ -d "$FULLDIR" ] && $FULLDIR/setup.sh
+	[ -d "$FULLDIR" ] && . $FULLDIR/setup.sh
 	# source ~/.zshrc
 }
 

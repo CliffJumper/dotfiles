@@ -1,4 +1,5 @@
 #!/bin/bash
+# TODO: Need to update for restructuring
 
 ## Install some tools
 sudo apt install coreutils
