@@ -18,8 +18,8 @@ case $DISTRO in
         DISTRO_DIR=$FULLDIR/Debian
         ;;
     
-    openSuse | sel)
-        DISTRO_DIR=$FULLDIR/Suse
+    opensuse-tumbleweed )
+        DISTRO_DIR="$FULLDIR/Suse"
         ;;
     
     *)
